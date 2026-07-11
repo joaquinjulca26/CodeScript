@@ -53,5 +53,10 @@ Contributions, suggestions, and bug reports are welcome.
 This project is licensed under the MIT License.
 
 ---
+## ☕ Support
+
+If you like CodeScript and want to support its development, you can support me on Ko-fi.
+
+**Ko-fi:** https://ko-fi.com/joaquinjulca
 
 Created by **Joaquín Julca**.
