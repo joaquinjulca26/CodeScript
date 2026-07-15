@@ -12,7 +12,7 @@ const code = fs.readFileSync(file, "utf-8");
 function runCodeScript(code: string) {
     const lines = code.split("\n");
 
-    // Almacena las variables
+    // Variables
     const variables = new Map<string, string>();
 
     for (const line of lines) {
@@ -27,7 +27,7 @@ function runCodeScript(code: string) {
                 const name = parts[0].trim();
                 const value = parts[1].trim().replace(/"/g, "");
 
-                variables.set(name, value);console.log("Variable creada:", name, "=", value);
+                variables.set(name, value);
             }
 
             continue;
@@ -41,13 +41,33 @@ function runCodeScript(code: string) {
                 .trim();
 
             if (variables.has(value)) {
-                console.log("Buscando:", value);
-                console.log(variables);
                 console.log(variables.get(value));
             } else {
-                console.log(value.replace(/"/g, ""));
+                console.log(value.replace(/"/g,""));
             }
 
+            continue;
+        }
+
+        // If
+        if (command.startsWith("If(")) {
+            const value = command
+                .replace("If(", "")
+                .replace(")", "")
+                .trim();
+
+            if (variables.has(value)) {
+                console.log(`If: la variable '${value}' existe.`);
+            } else {
+                console.log(`If: la variable '${value}' no existe.`);
+            }
+
+            continue;
+        }
+
+        // Else
+        if (command === "Else") {
+            console.log("Else ejecutado.");
             continue;
         }
     }
