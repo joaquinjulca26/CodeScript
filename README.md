@@ -19,15 +19,24 @@ CodeScript is currently under active development and continues to evolve with ne
 * Open source
 * Inspired by Python, C++, Java, and TypeScript
 * Variable support with `let`
+* Basic output using `Output()`
+* Initial support for `If` and `Else`
 * Basic interpreter
 * Currently under development
 
 ## 📦 Current Version
 
-**v0.0.2** (Pre-release)
+**v0.0.3** (Pre-release)
 
-<img width="1310" height="718" alt="image" src="https://github.com/user-attachments/assets/a8c10875-9aa5-425e-b5d5-02537f8ea402" />
+<img width="1280" height="511" alt="image" src="https://github.com/user-attachments/assets/e53edef8-3c3f-44e9-8938-83b468f532ee" />
 
+
+### What's New in v0.0.3
+
+- ✅ Added the first implementation of `If`
+- ✅ Added the first implementation of `Else`
+- ✅ Improved the interpreter structure for future control flow features
+- 🚧 Preparing the language for comparison operators and loops
 
 ### Example
 
@@ -35,12 +44,18 @@ CodeScript is currently under active development and continues to evolve with ne
 let name = "Joaquin"
 
 Output(name)
+
+If(name)
+
+Else
 ```
 
 Output:
 
 ```text
 Joaquin
+If: the variable 'name' exists.
+Else executed.
 ```
 
 ## 🛠️ Roadmap
@@ -48,9 +63,10 @@ Joaquin
 * [x] Project created
 * [x] First public release
 * [x] Variables (`let`)
-* [ ] Functions
-* [ ] Conditions (`if` / `else`)
+* [x] Initial `If` / `Else`
+* [ ] Comparison operators (`==`, `!=`, `<`, `>`, `<=`, `>=`)
 * [ ] Loops (`for` / `while`)
+* [ ] Functions
 * [ ] Standard library
 
 ## 📂 Project Structure
@@ -66,6 +82,8 @@ package.json
 
 Contributions, suggestions, and bug reports are welcome.
 
+If you'd like to help improve CodeScript, feel free to open an issue or submit a pull request.
+
 ## 📄 License
 
 This project is licensed under the MIT License.
@@ -79,4 +97,3 @@ If you like CodeScript and want to support its development, you can support me o
 **Ko-fi:** https://ko-fi.com/joaquinjulca
 
 Created by **Joaquín Julca**.
-
