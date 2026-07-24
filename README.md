@@ -21,41 +21,49 @@ CodeScript is currently under active development and continues to evolve with ne
 * Variable support with `let`
 * Basic output using `Output()`
 * Initial support for `If` and `Else`
-* Basic interpreter
+* Comparison operators: `==`, `!=`, `<`, `>`, `<=`, `>=`
+* Arithmetic operations: `+`, `-`, `*`, `/`
+* Parentheses support for grouped expressions
+* Basic interpreter with improved parsing
 * Currently under development
 
 ## 📦 Current Version
 
-**v0.0.3** (Pre-release)
+**v0.0.4** (Pre-release)
 
-<img width="1280" height="511" alt="image" src="https://github.com/user-attachments/assets/e53edef8-3c3f-44e9-8938-83b468f532ee" />
+<img width="1281" height="486" alt="image" src="https://github.com/user-attachments/assets/e648c5fc-6e23-41c2-9745-4fd0d4cd092a" />
 
 
-### What's New in v0.0.3
+### What's New in v0.0.4
 
-- ✅ Added the first implementation of `If`
-- ✅ Added the first implementation of `Else`
-- ✅ Improved the interpreter structure for future control flow features
-- 🚧 Preparing the language for comparison operators and loops
+- ✅ Added support for comparison operators
+- ✅ Added support for arithmetic expressions
+- ✅ Added support for parentheses in expressions
+- ✅ Improved tokenization and expression parsing
+- ✅ Better handling of strings, numbers, and identifiers
+- 🚧 Preparing the language for loops and functions
 
 ### Example
 
 ```cds
 let name = "Joaquin"
+let age = 25
 
 Output(name)
+Output(age)
 
-If(name)
-
+If(age >= 18)
+    Output("Adult")
 Else
+    Output("Minor")
 ```
 
 Output:
 
 ```text
 Joaquin
-If: the variable 'name' exists.
-Else executed.
+25
+Adult
 ```
 
 ## 🛠️ Roadmap
@@ -64,7 +72,7 @@ Else executed.
 * [x] First public release
 * [x] Variables (`let`)
 * [x] Initial `If` / `Else`
-* [ ] Comparison operators (`==`, `!=`, `<`, `>`, `<=`, `>=`)
+* [x] Comparison operators (`==`, `!=`, `<`, `>`, `<=`, `>=`)
 * [ ] Loops (`for` / `while`)
 * [ ] Functions
 * [ ] Standard library
